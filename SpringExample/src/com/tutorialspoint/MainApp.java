@@ -11,17 +11,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  *
  */
 public class MainApp {
+	
+	private static ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");;
 
-	/**
-	 * @param args
+	/*
+	 * Example of the singleton scope
 	 */
-	public static void main(String[] args) {
-		
-		// Context is never closed, resource leak
-		@SuppressWarnings("resource")
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-		
-		// Singleton Scope
+	private static void runSingletonExample()
+	{
 		SingletonScope objA = (SingletonScope) context.getBean("singletonScope");
 		
 		objA.setMessage("I'm a singleton object");
@@ -29,8 +26,10 @@ public class MainApp {
 		
 		SingletonScope objB = (SingletonScope) context.getBean("singletonScope");
 		objB.printMessage();
-		
-		// Prototype Scope
+	}
+	
+	private static void runPrototypeExample() 
+	{
 		PrototypeScope protoA = (PrototypeScope) context.getBean("prototypeScope");
 		
 		protoA.setMessage("I'm a prototype object");
@@ -38,7 +37,15 @@ public class MainApp {
 		
 		PrototypeScope protoB = (PrototypeScope) context.getBean("prototypeScope");
 		protoB.printMessage();
-		
+	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+		runSingletonExample();
+		runPrototypeExample();
 	}
 
 }

@@ -7,13 +7,23 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<!-- Singleton Scope -->
-	<bean id="singletonScope" class="com.tutorialspoint.SingletonScope" scope="singleton">
-		<property name="message" value="Hello Singleton!"></property>
+	<bean 
+		id="singletonScope" 
+		class="com.tutorialspoint.SingletonScope" 
+		scope="singleton">
+		<property 
+			name="message" 
+			value="Hello Singleton!"></property>
 	</bean>
 	
 	<!-- Prototype Scope -->
-	<bean id="prototypeScope" class="com.tutorialspoint.PrototypeScope" scope = "prototype">
-		<property name="message" value="Hello Prototype!"></property>
+	<bean 
+		id="prototypeScope" 
+		class="com.tutorialspoint.PrototypeScope" 
+		scope = "prototype">
+		<property 
+			name="message" 
+			value="Hello Prototype!"></property>
 	</bean>
 
 </beans>

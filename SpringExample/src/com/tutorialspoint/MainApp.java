@@ -1,8 +1,5 @@
 /**
  *  MainApp.java
- * 
- *  Hello world example from tutorialspoint.com
- *  http://www.tutorialspoint.com/spring/spring_hello_world_example.htm
  */
 package com.tutorialspoint;
 
@@ -28,10 +25,19 @@ public class MainApp {
 		SingletonScope objA = (SingletonScope) context.getBean("singletonScope");
 		
 		objA.setMessage("I'm a singleton object");
-		objA.getMessage();
+		objA.printMessage();
 		
 		SingletonScope objB = (SingletonScope) context.getBean("singletonScope");
-		objB.getMessage();
+		objB.printMessage();
+		
+		// Prototype Scope
+		PrototypeScope protoA = (PrototypeScope) context.getBean("prototypeScope");
+		
+		protoA.setMessage("I'm a prototype object");
+		protoA.printMessage();
+		
+		PrototypeScope protoB = (PrototypeScope) context.getBean("prototypeScope");
+		protoB.printMessage();
 		
 	}
 

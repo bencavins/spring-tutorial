@@ -10,5 +10,10 @@
 	<bean id="singletonScope" class="com.tutorialspoint.SingletonScope" scope="singleton">
 		<property name="message" value="Hello Singleton!"></property>
 	</bean>
+	
+	<!-- Prototype Scope -->
+	<bean id="prototypeScope" class="com.tutorialspoint.PrototypeScope" scope = "prototype">
+		<property name="message" value="Hello Prototype!"></property>
+	</bean>
 
 </beans>

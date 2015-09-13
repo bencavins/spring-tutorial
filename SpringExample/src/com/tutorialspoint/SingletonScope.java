@@ -3,6 +3,8 @@
  * 
  * To demonstrate the singleton scope functionality for beans
  * 
+ * Use singleton scope for state-less beans.
+ * 
  * http://www.tutorialspoint.com/spring/spring_bean_scopes.htm
  */
 package com.tutorialspoint;
@@ -20,9 +22,9 @@ public class SingletonScope {
 		this.message = message;
 	}
 	
-	public void getMessage()
+	public void printMessage()
 	{
-		System.out.println("Your message = " + this.message);
+		System.out.println(this.message);
 	}
 	
 }

@@ -4,6 +4,7 @@
 package com.tutorialspoint;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -47,6 +48,16 @@ public class MainApp {
 		System.out.println("\n");
 	}
 	
+	private static void runBeanLifeCycleExample()
+    {
+	    System.out.println("---------- runBeanLifeCycleExample ----------\n");
+	    
+	    @SuppressWarnings("unused")
+        BeanLifeCycle cycleA = (BeanLifeCycle) context.getBean("beanLifeCycle");
+	    
+	    System.out.println("\n");
+    }
+	
 	/**
 	 * @param args
 	 */
@@ -54,6 +65,9 @@ public class MainApp {
 	{
 		runSingletonExample();
 		runPrototypeExample();
+		runBeanLifeCycleExample();
+		
+		((AbstractApplicationContext) context).close();
 	}
 
 }

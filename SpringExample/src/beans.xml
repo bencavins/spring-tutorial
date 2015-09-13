@@ -13,7 +13,8 @@
 		scope="singleton">
 		<property 
 			name="message" 
-			value="Hello Singleton!"></property>
+			value="Hello Singleton!">
+		</property>
 	</bean>
 	
 	<!-- Prototype Scope -->
@@ -23,7 +24,17 @@
 		scope = "prototype">
 		<property 
 			name="message" 
-			value="Hello Prototype!"></property>
+			value="Hello Prototype!">
+		</property>
 	</bean>
+	
+	<!-- Bean Life Cycle with Implementation -->
+	<bean
+		id="beanLifeCycle"
+		class="com.tutorialspoint.BeanLifeCycle"
+		init-method="init"
+		destroy-method="destroy">
+	</bean>
+		
 
 </beans>

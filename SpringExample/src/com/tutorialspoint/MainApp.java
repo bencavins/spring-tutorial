@@ -19,17 +19,23 @@ public class MainApp {
 	 */
 	private static void runSingletonExample()
 	{
-		SingletonScope objA = (SingletonScope) context.getBean("singletonScope");
+	    System.out.println("---------- runSingletonExample ----------\n");
+		
+	    SingletonScope objA = (SingletonScope) context.getBean("singletonScope");
 		
 		objA.setMessage("I'm a singleton object");
 		objA.printMessage();
 		
 		SingletonScope objB = (SingletonScope) context.getBean("singletonScope");
 		objB.printMessage();
+		
+		System.out.println("\n");
 	}
 	
 	private static void runPrototypeExample() 
 	{
+	    System.out.println("---------- runPrototypeExample ----------\n");
+	    
 		PrototypeScope protoA = (PrototypeScope) context.getBean("prototypeScope");
 		
 		protoA.setMessage("I'm a prototype object");
@@ -37,6 +43,8 @@ public class MainApp {
 		
 		PrototypeScope protoB = (PrototypeScope) context.getBean("prototypeScope");
 		protoB.printMessage();
+		
+		System.out.println("\n");
 	}
 	
 	/**

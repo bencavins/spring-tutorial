@@ -13,18 +13,19 @@ package com.tutorialspoint;
  * @author ben
  *
  */
-public class SingletonScope {
-	
-	private String message;
-	
-	public void setMessage(String message)
-	{
-		this.message = message;
-	}
-	
-	public void printMessage()
-	{
-		System.out.println(this.message);
-	}
-	
+public class SingletonScope
+{
+
+    private String message;
+
+    public void setMessage(String message)
+    {
+        this.message = message;
+    }
+
+    public void printMessage()
+    {
+        System.out.println(this.message);
+    }
+
 }

@@ -7,7 +7,7 @@ public class BeanLifeCycle
     {
         System.out.println("Creating Bean!");
     }
-    
+
     public void destroy()
     {
         System.out.println("Destroying Bean!");

@@ -1,20 +1,19 @@
 package com.bencavins;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.AbstractApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp
 {
 
     public static void main(String[] args)
     {
-        ApplicationContext context = new FileSystemXmlApplicationContext("beans.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("/com/bencavins/beans/beans.xml");
         
         Person person = (Person) context.getBean("person");
         person.speak(); 
         
-        ((AbstractApplicationContext) context).close();
+        ((ClassPathXmlApplicationContext) context).close();
     }
 
 }

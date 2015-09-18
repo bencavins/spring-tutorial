@@ -10,12 +10,9 @@ public class MainApp
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("/com/bencavins/beans/beans.xml");
 
-        Person person1 = (Person) context.getBean("person");
-        Person person2 = (Person) context.getBean("person");
+        Person person = (Person) context.getBean("person");
 
-        person1.setTaxId(456789);
-
-        System.out.println(person2);
+        person.setTaxId(456789);
 
         ((ClassPathXmlApplicationContext) context).close();
     }

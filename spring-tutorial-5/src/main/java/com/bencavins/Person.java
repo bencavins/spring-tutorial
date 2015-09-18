@@ -19,6 +19,12 @@ public class Person
         this.id = id;
         this.name = name;
     }
+    
+    public static Person getInstance(Integer id, String name)
+    {
+        System.out.println("Creating Person using factory method...");
+        return new Person(id, name);
+    }
 
     public void speak()
     {

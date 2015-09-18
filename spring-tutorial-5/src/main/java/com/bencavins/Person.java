@@ -24,6 +24,16 @@ public class Person
     {
         System.out.println("Hello, world, I'm a person!\n");
     }
+    
+    public void onCreate()
+    {
+        System.out.println("Person created: " + this);
+    }
+    
+    public void onDestroy()
+    {
+        System.out.println("Person destroyed: " + this);
+    }
 
     public void setTaxId(int taxId)
     {

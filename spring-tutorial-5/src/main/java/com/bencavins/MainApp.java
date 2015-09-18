@@ -9,12 +9,12 @@ public class MainApp
     public static void main(String[] args)
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("/com/bencavins/beans/beans.xml");
-        
+
         Person person = (Person) context.getBean("person");
-        person.speak(); 
-        
+        person.speak();
+
         System.out.println(person);
-        
+
         ((ClassPathXmlApplicationContext) context).close();
     }
 

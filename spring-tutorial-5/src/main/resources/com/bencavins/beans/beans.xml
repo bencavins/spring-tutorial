@@ -5,11 +5,11 @@
 
 
 	<bean id="person" class="com.bencavins.Person">
-		<constructor-arg value="777" name="id"
-			type="java.lang.Integer">
+		<constructor-arg value="777" name="id" type="java.lang.Integer">
 		</constructor-arg>
 		<constructor-arg value="Steve McQueen" name="name"
 			type="java.lang.String">
 		</constructor-arg>
+		<property name="taxId" value="123"></property>
 	</bean>
 </beans>

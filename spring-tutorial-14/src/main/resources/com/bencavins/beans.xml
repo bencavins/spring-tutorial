@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="fruitbasket" class="com.bencavins.FruitBasket">
+		<constructor-arg value="My fruit basket"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>apple</value>
+				<value>orange</value>
+				<value>banana</value>
+				<value>peach</value>
+			</list>
+		</constructor-arg>
+	</bean>
+</beans>
